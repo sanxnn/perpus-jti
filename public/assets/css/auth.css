@@ -1,0 +1,138 @@
+:root {
+    --primary: #1e40af; /* biru tua — branding utama */
+    --primary-light: #3b82f6; /* biru sedang */
+    --primary-bg: #eff6ff; /* biru sangat muda */
+    --surface: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 12px rgba(30, 64, 175, 0.12);
+}
+
+body {
+    background-color: #f8fafc;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+.auth-wrapper {
+    width: 100%;
+    max-width: 870px;
+}
+
+.auth-card {
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-2px);
+}
+
+.auth-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.auth-header h1 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.auth-header .logo-icon {
+    margin-right: 8px;
+}
+
+.auth-body {
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.input-group-text {
+    background-color: #f1f5f9;
+    border-right: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 0.65rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.footer-links a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+/* Animasi subtle */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Dark mode vars (bisa diaktifkan nanti) */
+[data-theme="dark"] {
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --primary-bg: #1e293b;
+    --surface: #0f172a;
+    --text: #f1f5f9;
+    --border: #334155;
+}
+
+[data-theme="dark"] body {
+    background-color: #020617;
+}
